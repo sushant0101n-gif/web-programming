@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CSS Portfolio</title>
+
+  <style>
+    /* 1. Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 2. Base styles */
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+
+    p {
+      color: #64748b;
+    }
+
+    /* 3. Navigation */
+    .nav {
+      background-color: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+    }
+
+    .nav-logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: white;
+    }
+
+    .nav-links a:hover {
+      color: #10B981;
+    }
+
+    /* 4. Hero section */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background-color: #ecfdf5;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #15803d;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #10B981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #059669;
+    }
+
+    /* 5. Skills grid */
+    .skills-section {
+      padding: 60px 40px;
+      text-align: center;
+      scroll-margin-top: 20px;
+    }
+
+    .skills-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .skills-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      flex: 1;
+      background-color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .skill-card h3 {
+      color: #0369a1;
+      margin-bottom: 10px;
+    }
+
+    /* 6. Contact */
+    .contact {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f1f5f9;
+    }
+
+    .contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      color: #10B981;
+      font-weight: bold;
+    }
+
+    /* 7. Footer */
+    .footer {
+      background-color: #1e293b;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .footer p {
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <span class="nav-logo">Sushant's Portfolio</span>
+
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Hello, I'm Sushant!</h1>
+    <p>I am a university student in Korea learning web programming and CSS.</p>
+    <a href="#skills" class="btn">See My Skills</a>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <h2>What I Am Learning</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>HTML5</h3>
+        <p>Building webpage structure and using semantic elements.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>CSS3</h3>
+        <p>Styling webpages with colours, fonts, spacing, and layouts.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Flexbox</h3>
+        <p>Creating flexible and responsive layouts with CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to connect with me and talk about web programming.</p>
+    <a href="mailto:sushant0101n@gmail.com">sushant0101n@gmail.com</a>
+  </section>
+
+  <footer class="footer">
+    <p>K0126002 Web Programming &copy; 2026 Gachon University</p>
+  </footer>
+
+</body>
+</html>
