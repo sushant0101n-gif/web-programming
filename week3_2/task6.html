@@ -1,7 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <style>
   :root {
     --primary: #0f766e;
@@ -9,6 +11,7 @@
     --bg: #f0fdfa;
     --text: #134e4a;
     --radius: 12px;
+    --space: 20px;
   }
 
   * {
@@ -25,17 +28,17 @@
   }
 
   h1 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .intro {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: var(--space);
   }
 
   @media (min-width: 640px) {
@@ -47,7 +50,7 @@
   .card {
     background: var(--bg);
     border: 2px solid var(--accent);
-    padding: 24px;
+    padding: var(--space);
     border-radius: var(--radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -85,42 +88,64 @@
 
 <body>
 
-  <h1>My Skills</h1>
-  <p class="intro">Hi! I'm a Gachon University student learning web programming and technology.</p>
+  <h1>About Me</h1>
+  <p class="intro">
+    Hi! I'm Sushant, a student at Gachon University. 
+    I'm currently learning web programming and improving my coding skills.
+  </p>
 
   <div class="grid">
 
-    <div class="card" data-icon="🌐">
-      <h2>HTML</h2>
-      <p>Building clean and semantic web pages using HTML5.</p>
-    </div>
-
-    <div class="card" data-icon="🎨">
-      <h2>CSS</h2>
-      <p>Creating attractive layouts, colors, animations, and responsive designs.</p>
+    <div class="card" data-icon="🎓">
+      <h2>University Life</h2>
+      <p>
+        I study at Gachon University and I'm working on different
+        assignments and projects as part of my studies.
+      </p>
     </div>
 
     <div class="card" data-icon="💻">
       <h2>Web Programming</h2>
-      <p>Learning the fundamentals of creating modern websites and web applications.</p>
+      <p>
+        I'm learning how websites work and practicing HTML, CSS,
+        and JavaScript in my Web Programming class.
+      </p>
     </div>
 
-    <div class="card" data-icon="📐">
-      <h2>Flexbox</h2>
-      <p>Using Flexbox to create flexible and well-organized page layouts.</p>
+    <div class="card" data-icon="🌐">
+      <h2>HTML</h2>
+      <p>
+        I use HTML to create the structure of my web pages,
+        including headings, sections, links, images, and forms.
+      </p>
     </div>
 
-    <div class="card" data-icon="🗂️">
-      <h2>CSS Grid</h2>
-      <p>Designing responsive multi-column layouts with CSS Grid.</p>
+    <div class="card" data-icon="🎨">
+      <h2>CSS</h2>
+      <p>
+        I'm learning how to style my websites with colors,
+        layouts, borders, animations, and responsive designs.
+      </p>
+    </div>
+
+    <div class="card" data-icon="📱">
+      <h2>Responsive Design</h2>
+      <p>
+        I'm practicing how to make my websites look good
+        on both mobile phones and larger computer screens.
+      </p>
     </div>
 
     <div class="card" data-icon="🚀">
-      <h2>Future Goals</h2>
-      <p>Improve my programming skills and become a better web developer.</p>
+      <h2>My Goal</h2>
+      <p>
+        My goal is to become more confident in programming
+        and build better websites and projects in the future.
+      </p>
     </div>
 
   </div>
 
 </body>
 </html>
+```
