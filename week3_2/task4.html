@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<style>
+  :root {
+    --primary: #0f766e;
+    --accent: #14b8a6;
+    --bg: #f0fdfa;
+    --text: #134e4a;
+    --radius: 12px;
+    --spacing: 20px;
+    --small-spacing: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #2dd4bf;
+      --accent: #5eead4;
+      --bg: #134e4a;
+      --text: #f0fdfa;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    padding: var(--spacing);
+  }
+
+  .btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--small-spacing) var(--spacing);
+    cursor: pointer;
+  }
+
+  .card {
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+    max-width: 400px;
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .card p {
+    line-height: 1.6;
+  }
+
+  .info {
+    margin-top: var(--small-spacing);
+    padding: var(--small-spacing);
+    border-radius: var(--radius);
+    background: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+  <h1>My Personal Space</h1>
+  <p>Welcome to my themed webpage.</p>
+
+  <button class="btn">Explore More</button>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm a university student interested in web development,
+      technology, and learning new skills.
+    </p>
+
+    <div class="info">
+      <strong>Current Focus:</strong> HTML, CSS and JavaScript
+    </div>
+  </div>
+
+</body>
+</html>
