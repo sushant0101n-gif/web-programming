@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: sans-serif; }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    z-index: 1000;
+  }
+
+  .nav-logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: #14b8a6;
+  }
+
+  .content { padding-top: 70px; }
+
+  .section {
+    height: 400px;
+    padding: 40px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#" class="nav-logo">WebPro</a>
+
+    <div class="nav-links">
+      <a href="#s1">Home</a>
+      <a href="#s2">Topics</a>
+      <a href="#s3">Quiz</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="section" id="s1" style="background:#f0fdfa">
+      <h1>Welcome to WebPro</h1>
+      <p>Learn the basics of modern web development.</p>
+    </div>
+
+    <div class="section" id="s2" style="background:#ccfbf1">
+      <h1>Topics</h1>
+      <p>Explore HTML, CSS, Flexbox, animations, and more.</p>
+    </div>
+
+    <div class="section" id="s3" style="background:#99f6e4">
+      <h1>Quiz</h1>
+      <p>Test your knowledge of web programming!</p>
+    </div>
+  </div>
+
+</body>
+</html>
