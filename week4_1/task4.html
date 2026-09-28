@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><body style="font-family:system-ui;padding:20px;max-width:420px;margin:auto">
+  <style>
+    h2 { color: #1a56db; }
+    #search { width:100%; padding:10px 14px; font-size:16px;
+      border:2px solid #1a56db; border-radius:10px; margin-bottom:14px; }
+    .student { padding:10px 14px; margin-bottom:6px; background:#f0f4ff;
+      border-radius:8px; border:1px solid #c8d4f0; font-size:15px; }
+    mark { background:#f7df1e; border-radius:3px; }
+    #no-results { display:none; color:#9ca3af; text-align:center; padding:20px; }
+  </style>
+
+  <h2>Student Search</h2>
+
+  <input id="search" type="text" placeholder="Search students...">
+
+  <div id="student-list">
+    <div class="student" data-name="Khanal Aswin">Khanal Aswin — Computer Engineering</div>
+    <div class="student" data-name="Silwal Saiman">Silwal Saiman — Web Programming</div>
+    <div class="student" data-name="Pandey Aayush">Pandey Aayush — Software Engineering</div>
+    <div class="student" data-name="Tamang Nischal">Tamang Nischal — Business Administration</div>
+    <div class="student" data-name="Pandey Prashant">Pandey Prashant — Software Development</div>
+    <div class="student" data-name="Nikesh Dahal">Nikesh Dahal — Machine Learning</div>
+    <div class="student" data-name="Waiba Arun">Waiba Arun — Cloud Design</div>
+  </div>
+
+  <p id="no-results">No students found.</p>
+
+  <script>
+    const search = document.querySelector('#search');
+    const students = document.querySelectorAll('.student');
+    const noResults = document.querySelector('#no-results');
+
+    students.forEach(function(student) {
+      student.dataset.original = student.innerHTML;
+    });
+
+    search.addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      let found = false;
+
+      students.forEach(function(student) {
+        const name = student.getAttribute('data-name');
+        const lowerName = name.toLowerCase();
+
+        if (lowerName.includes(term)) {
+          student.style.display = '';
+          found = true;
+
+          if (term !== '') {
+            const index = lowerName.indexOf(term);
+            const before = name.substring(0, index);
+            const match = name.substring(index, index + term.length);
+            const after = name.substring(index + term.length);
+
+            const major = student.dataset.original.split(' — ')[1];
+
+            student.innerHTML =
+              '<mark>' + before + match + '</mark>' +
+              after + ' — ' + major;
+          } else {
+            student.innerHTML = student.dataset.original;
+          }
+        } else {
+          student.style.display = 'none';
+        }
+      });
+
+      if (found) {
+        noResults.style.display = 'none';
+      } else {
+        noResults.style.display = 'block';
+      }
+    });
+  </script>
+
+</body></html>
