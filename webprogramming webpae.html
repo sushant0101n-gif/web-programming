@@ -120,7 +120,7 @@
 
     .student-profile {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(130px, 0.7fr) minmax(190px, 1fr);
+      grid-template-columns: minmax(0, 1fr);
       align-items: center;
       gap: 22px;
       margin: 0 0 32px;
@@ -130,7 +130,7 @@
       color: var(--white);
     }
 
-    .profile-label, .profile-detail span {
+    .profile-label {
       display: block;
       margin-bottom: 5px;
       color: var(--lime);
@@ -152,16 +152,6 @@
       color: rgb(255 254 249 / 78%);
       font-size: 12px;
     }
-
-    .profile-detail strong, .profile-detail a {
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .profile-detail a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .profile-detail a:hover { color: var(--lime); }
-    .profile-email { overflow-wrap: anywhere; }
 
     .controls {
       display: flex;
@@ -332,8 +322,7 @@
       main { padding: 48px 0 60px; }
       .intro { grid-template-columns: 1fr; gap: 18px; margin-bottom: 27px; }
       .intro-aside { max-width: 330px; }
-      .student-profile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; padding: 18px; }
-      .profile-heading { grid-column: 1 / -1; }
+      .student-profile { padding: 18px; }
       .task-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-left: 0; }
       .week summary { grid-template-columns: 45px minmax(0, 1fr) auto 17px; gap: 9px; min-height: 72px; }
       .week-title { font-size: 21px; }
@@ -375,14 +364,6 @@
           <span class="profile-label">Prepared by</span>
           <h2 class="profile-name">Neupane Sushant</h2>
           <p class="profile-study">Computer Engineering · Gachon University</p>
-        </div>
-        <div class="profile-detail">
-          <span>Student ID</span>
-          <strong>[redacted]</strong>
-        </div>
-        <div class="profile-detail">
-          <span>Email</span>
-          <a class="profile-email" href="mailto:[redacted]">[redacted]</a>
         </div>
       </section>
 
